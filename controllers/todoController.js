@@ -7,8 +7,8 @@ const todoFunction = (req, res) => {
         .then((result) => {
             console.log(result);
             console.log("Form submitted successfully");
-            res.status(200).json(result);
-            res.redirect(getFunction)
+            // res.status(200).json(result);
+            res.redirect("/getPost")
         })
         .catch((error) => {
             console.log(error);
@@ -21,7 +21,7 @@ const getFunction = (req, res) => {
         userModel.find()
         .then((result)=>{
             console.log(result);
-            // res.render("signup", {status: true, userDetails:result})
+            res.render("dashboard", {status: true, userDetails:result})
             // console.log(userDetails);
         })
         .catch((err)=>{

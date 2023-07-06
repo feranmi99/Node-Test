@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </head>
 <body>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, itaque vero quas vel odio vitae voluptatibus autem, soluta id eos exercitationem aut, facilis sequi adipisci illum? Accusantium, ex. Laudantium, minus.
+    <% for( let index = 0; index < userDetails.length; index++ ) { %>
+        <tbody class="bg-white divide-y divide-gray-300">
+            <tr class="whitespace-nowrap">
+                <td class="px-6 py-4 text-lg text-gray-900">
+                    <%= index +1 %>
+                </td>
+                <td class="px-6 py-4">
+                    <div class="text-lg text-gray-500">
+                        <%= userDetails[index].firstName %>
+                    </div>
+                </td>
+                <td class="px-6 py-4 text-lg text-gray-500">
+                    <%= userDetails[index].lastName %>
+                </td>
+                <td class="px-6 py-4 text-lg text-gray-500">
+                    <%= userDetails[index].matricNumber %>
+                </td>
+                <td class="px-6 py-4">
+                    <div class="text-lg text-gray-500"><%= userDetails[index].email %></div>
+                </td>
+                <td class="px-6 py-4">
+                    <form action="/edit" method="post">
+                        <input type="hidden" value=<%= userDetails[index].email %> name="email">
+                        <button class="px-4 py-1 text-md font-medium text-indigo-600 bg-indigo-200 rounded-lg">Edit</button>
+                    </form>
+                </td>
+                <td class="px-6 py-4">
+                    <form action="/delete" method="post">
+                        <input type="hidden" value=<%= userDetails[index].email %> name="email">
+                        <button class="px-4 py-1 text-md font-medium text-red-400 bg-red-200 rounded-lg">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    <% } %>
 </body>
 </html>
