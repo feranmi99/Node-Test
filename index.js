@@ -26,6 +26,37 @@ app.get("/",(req,res)=>{
 })
 
 
+app.post("/delete",(req,res)=>{
+    userModel.deleteOne({email:req.body.email})
+    .then((result)=>{
+        res.redirect("/details")
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+})
+
+app.post("/edit",(req,res)=>{
+    console.log(req.body);
+    userModel.findOne({email:req.body.email})
+    .then((result)=>{
+        if(result) {
+            res.render("editusers", {info: result})
+            console.log(result);
+        }
+    })
+})
+
+app.post("/update", (req,res)=>{
+    console.log(req.body);
+    userModel.updateOne({email:req.body.email},req.body)
+    .then((result)=>{
+        console.log(result);
+        res.redirect("/details")
+    })
+    
+})
+
 app.listen(port, ()=>{
     console.log(`Lift off! server has started ${port}`);
 })

@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </head>
 <body>
+    <h1 class="text-center text-5xl my-5 font-bold text-indigo-500">Dashborad</h1>
     <div class="flex flex-wrap">
 
         <% for( let index=0; index < userDetails.length; index++ ) { %>
@@ -15,6 +16,7 @@
                 <div
                     class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                     <div class="p-6">
+                        <h1 class="title-font text-2xl font-medium text-gray-900 mb-3"><%= index %></h1>
                         <h1 class="title-font text-2xl font-medium text-gray-900 mb-3"><%= userDetails[index].firstName %></h1>
                         <h1 class="title-font text-lg font-medium text-gray-900 mb-3"><%= userDetails[index].lastName %></h1>
                         <h1 class="title-font text-lg font-medium text-gray-900 mb-3"> <%= userDetails[index].matricNumber %></h1>
@@ -36,5 +38,6 @@
             </div>
             <% } %>
     </div>
+    <a href="signup" class="font-bold text-3xl text-indigo-500 ms-8 border border-red-700 p-3 rounded-lg border-2" >Back to home</a>
 </body>
 </html>
