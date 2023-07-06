@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body>
+    <section class="text-gray-600 ">
+        <div class="container px-5 pb-5 mx-auto">
+
+            <div class="lg:w-3/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col mx-auto  w-full mt-5 md:mt-0">
+                <form action="/todoPost" method="POST">
+                    <h2 class="text-indigo-500 text-3xl text-center font-bold title-font mb-5">Student-Portal</h2>
+
+                    <div class="relative mb-4">
+                        <label for="Student First Name" class="leading-7 text-sm text-gray-600">Student First Name</label>
+                        <input type="text" name="firstName"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="Student Last Name" class="leading-7 text-sm text-gray-600">Student Last Name</label>
+                        <input type="text" name="lastName"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="Student Matric Number" class="leading-7 text-sm text-gray-600">Student Matric Number</label>
+                        <input type="text" name="matricNumber"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="Email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" name="email"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="Password" class="leading-7 text-sm text-gray-600">Password</label>
+                        <input type="password" name="password"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+
+                    <button
+                        class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                        type="submit">
+                        Button
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- <p class="font-medium text-5xl text-center ">cart</p>
+    <hr class="container mx-auto my-2">
+
+    <div class="p-4 md:w-1/4">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div class="p-6">
+                <h1 class="title-font text-2xl font-medium text-gray-900 mb-3">ItemName</h1>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Itemprice</h1>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Quntity</h1>
+                <div class="flex gap-2 items-center flex-wrap">
+                    <button
+                        class="text-white bg-red-600 font-medium border-0 py-2 px-8 focus:outline-none hover:bg-red-800 rounded text-lg"
+                        type="submit">
+                        Delete
+                    </button>
+                    <button
+                        class="text-white bg-yellow-500 font-medium border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg"
+                        type="submit">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>
