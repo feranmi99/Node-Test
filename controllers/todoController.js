@@ -8,7 +8,7 @@ const todoFunction = (req, res) => {
             console.log(result);
             console.log("Form submitted successfully");
             res.status(200).json(result);
-            res.render("dashboard")
+            res.redirect(getFunction)
         })
         .catch((error) => {
             console.log(error);
