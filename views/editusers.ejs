@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    
+</head>
+<body>
+    <!-- <h1>Signin</h1>
+    <form action="/signin" method="post">
+        <input type="email" placeholder="email" name="email">
+        <input type="password" placeholder="password" name="password">
+        <button type="submit">Submit</button>
+
+    </form> -->
+    <section class="text-gray-600 ">
+        <div class="container px-5 py-10 mx-auto">
+
+            <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col mx-auto  w-full mt-5 md:mt-0">
+                <form action="/update" method="post">
+                    <h2 class="text-indigo-500 text-2xl font-bold title-font mb-5 text-center">Edit user</h2>
+                    <div class="relative mb-4">
+                        <label for="Firstname" class="leading-7 text-sm text-gray-600">First Name</label>
+                        <input type="text" id="Firstname" name="firstname" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="<%= info.firstName %>">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="LastName" class="leading-7 text-sm text-gray-600">Last Name</label>
+                        <input type="text" id="LastName" name="lastName" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="<%= info.lastname %>">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="LastName" class="leading-7 text-sm text-gray-600">Matric Number</label>
+                        <input type="text" id="LastName" name="matricNumber" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="<%= info.lastname %>">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="<%= info.email %>">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="Password" class="leading-7 text-sm text-gray-600">Password</label>
+                        <input type="Password" id="Password" name="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="<%= info.password %>">
+                    </div>
+                    <button
+                        class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">
+                        Button
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

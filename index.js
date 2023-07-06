@@ -29,7 +29,7 @@ app.get("/",(req,res)=>{
 app.post("/delete",(req,res)=>{
     userModel.deleteOne({email:req.body.email})
     .then((result)=>{
-        res.redirect("/details")
+        res.redirect("/getPost")
     })
     .catch((err)=>{
         console.log(err);
@@ -52,7 +52,7 @@ app.post("/update", (req,res)=>{
     userModel.updateOne({email:req.body.email},req.body)
     .then((result)=>{
         console.log(result);
-        res.redirect("/details")
+        res.redirect("/getPost")
     })
     
 })
